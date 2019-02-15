@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ccffac11"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                tools:context=".ui.RootFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:text="@string/hello_blank_fragment"/>
+
+    <!--  BreadCrumb start -->
+    <!--
+    <FrameLayout
+            android:id="@+id/containerBreadCrumb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:visibility="visible">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_img_path_backgraund" />
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerBreadCrumbs"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:overScrollMode="never" />
+    </FrameLayout>
+    -->
+    <!--  BreadCrumb end -->
+
+<!--  Content start -->
+    <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/containerBreadCrumb"
+            android:visibility="visible">
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout-->
+                <!--android:id="@+id/refreshView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    android:paddingBottom="100dp" />
+        <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+    </FrameLayout>
+<!--  Content end -->
+    <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>
