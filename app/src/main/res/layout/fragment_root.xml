@@ -8,7 +8,7 @@
                 android:background="#ccffac11"
                 android:paddingStart="1dp"
                 android:paddingEnd="1dp"
-                tools:context=".ui.RootFragment">
+                tools:context=".presentation.root.RootFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -50,8 +50,7 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/containerBreadCrumb"
-            android:visibility="visible">
+            android:visibility="visible" >
 
         <!--<android.support.v4.widget.SwipeRefreshLayout-->
                 <!--android:id="@+id/refreshView"-->

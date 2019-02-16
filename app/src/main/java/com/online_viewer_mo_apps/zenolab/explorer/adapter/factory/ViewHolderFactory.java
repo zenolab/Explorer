@@ -12,10 +12,9 @@ import com.online_viewer_mo_apps.zenolab.explorer.R;
 import com.online_viewer_mo_apps.zenolab.explorer.adapter.GenericViewHolder;
 import com.online_viewer_mo_apps.zenolab.explorer.adapter.ItemType;
 import com.online_viewer_mo_apps.zenolab.explorer.adapter.listener.ItemActionListener;
-import com.online_viewer_mo_apps.zenolab.explorer.model.pojo.DirectoryEntity;
-import com.online_viewer_mo_apps.zenolab.explorer.model.pojo.FileEntity;
-import com.online_viewer_mo_apps.zenolab.explorer.model.pojo.GroupEntity;
-import com.online_viewer_mo_apps.zenolab.explorer.model.pojo.UserGroupsEntity;
+import com.online_viewer_mo_apps.zenolab.explorer.domain.pojo.DirectoryEntity;
+import com.online_viewer_mo_apps.zenolab.explorer.domain.pojo.FileEntity;
+import com.online_viewer_mo_apps.zenolab.explorer.domain.pojo.UserGroupsEntity;
 
 import java.util.List;
 

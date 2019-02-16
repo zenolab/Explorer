@@ -1,14 +1,10 @@
 package com.online_viewer_mo_apps.zenolab.explorer.adapter;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 import com.online_viewer_mo_apps.zenolab.explorer.adapter.factory.ViewHolderFactory;
 import com.online_viewer_mo_apps.zenolab.explorer.adapter.listener.ItemActionListener;
-import com.online_viewer_mo_apps.zenolab.explorer.model.pojo.DirectoryEntity;
-import com.online_viewer_mo_apps.zenolab.explorer.model.pojo.FileEntity;
-import com.online_viewer_mo_apps.zenolab.explorer.model.pojo.GroupEntity;
 
 import java.util.ArrayList;
 import java.util.List;

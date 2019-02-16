@@ -4,7 +4,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="#aa0fa7ed"
-             tools:context=".ui.directory.DirectoryFragment">
+             tools:context=".presentation.directory.DirectoryFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
