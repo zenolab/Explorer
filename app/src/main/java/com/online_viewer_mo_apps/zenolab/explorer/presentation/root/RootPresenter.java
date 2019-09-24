@@ -23,35 +23,22 @@ public class RootPresenter  extends MvpPresenter<RootFragmentView> implements Ro
     private RootInteractor rootInteractor;
     private RootCallbackInteractorImpl rootCallbackInteractor;
 
-
     public RootPresenter() {
-
         rootInteractor = new RootInteractor();
-       // rootCallbackInteractor = new RootCallbackInteractorImpl();
-        //rootCallbackInteractor.registerInterfaceCallback(this);
     }
 
     public void showInfo() {
-        Log.d(LOG_TAG, " -- Moxy Root PRESENTER ");
+        Log.d(LOG_TAG, "Moxy Root PRESENTER ");
     }
 
     public void generateData(List<ItemType> items){
-
         this.items = items;
         this.items.clear();
-        //--------------------------1 way composition------------------------------
         this.items.addAll(rootInteractor.getData());
-        //-----------------------2 way callbaks------------------------------
-//        rootCallbackInteractor.generateUserGroup();
-//        rootCallbackInteractor.generateDirectory();
-//        rootCallbackInteractor.generateFile();
-
-        // rootCallbackInteractor.generateRandomData();
-
         getViewState().setRootAdapter(this.items);
     }
 
-    //-----------------------------Interactor Callbacks-------------------------------------------------
+
     @Override
     public List<ItemType> setUserGroup(List<ItemType> typeList) {
         this.items.addAll(typeList);
@@ -72,13 +59,6 @@ public class RootPresenter  extends MvpPresenter<RootFragmentView> implements Ro
 
     @Override
     public String[] setGroup(String[] array) {
-        /*
-        Когда метод clone вызывается для массива, он возвращает ссылку на новый массив,
-         который содержит (или ссылки) те же элементы, что и исходный массив.
-          Итак, в вашем примере int [] a - это отдельный экземпляр объекта,
-          созданный в куче, а int [] b - отдельный экземпляр объекта, созданный в куче.
-          (Помните, что все массивы являются объектами).
-         */
         this.group = array.clone();
         return null;
     }
