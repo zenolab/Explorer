@@ -30,10 +30,8 @@ public class DirectoryFragment extends MvpAppCompatFragment implements Directory
 
     private static final String LOG_TAG = new RuntimeException().getStackTrace()[0].getClassName();
 
-    //-------------------- Moxy -------------
     @InjectPresenter
     DirectoryPresenter presenter;
-    //---------------------------------------
 
     RecyclerView recyclerView;
     MultipleTypesAdapter adapter;
@@ -55,23 +53,17 @@ public class DirectoryFragment extends MvpAppCompatFragment implements Directory
     }
 
     void initList() {
-
         recyclerView = (RecyclerView) directoryView.findViewById(R.id.recyclerDirectory);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new MultipleTypesAdapter();
         recyclerView.setAdapter(adapter);
-        //RecyclerView.RecycledViewPool pool = recyclerView.getRecycledViewPool();
-        //pool.setMaxRecycledViews();
-
     }
 
     @Override
     public void setDirectoryAdapter(List<ItemType> list) {
         adapter.addAll(list);
     }
-
-    //------------------------------------------------------------------------------------------------------------------
-
+    
     @Override
     public void onStart() {
         super.onStart();
@@ -83,14 +75,12 @@ public class DirectoryFragment extends MvpAppCompatFragment implements Directory
     public void onResume() {
         super.onResume();
         Log.e(LOG_TAG, " "+Thread.currentThread().getStackTrace()[2].getMethodName());
-
     }
-
+    
     @Override
     public void onPause() {
         super.onPause();
         Log.i(LOG_TAG, " "+Thread.currentThread().getStackTrace()[2].getMethodName());
-        //presenter.detachView();
     }
 
     @Override
@@ -117,9 +107,8 @@ public class DirectoryFragment extends MvpAppCompatFragment implements Directory
         super.onDetach();
         Log.e(LOG_TAG, " "+Thread.currentThread().getStackTrace()[2].getMethodName());
     }
-    //------------------------------------------------------------------------------------------------------------------
-    private void actionOfListAdapters() {
 
+    private void actionOfListAdapters() {
         adapter.registerActionListener(new ItemActionListener(){
 
             @Override
@@ -136,12 +125,9 @@ public class DirectoryFragment extends MvpAppCompatFragment implements Directory
         });
 
     }
-    //------------------------------------------------------------------------------------------------------------------
-
+    
     private void  openActivityDetails() {
         Intent intent = new Intent(getActivity(), DetailsActivity.class);
         startActivity(intent);
     }
-
-
 }
