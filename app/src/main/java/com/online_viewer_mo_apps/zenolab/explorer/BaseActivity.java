@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatDelegate;
 import com.arellomobile.mvp.MvpAppCompatActivity;
 
 @SuppressLint("Registered")
-//public abstract class BaseActivity extends AppCompatActivity {
 public abstract class BaseActivity  extends MvpAppCompatActivity {
 
     static {
